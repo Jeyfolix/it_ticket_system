@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Ticket System</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-content">
+        <h1>Admin Dashboard</h1>
+        <nav class="nav">
+          <a href="admin_dashboard.html" class="nav-link active">Dashboard</a>
+          <a href="../backend/logout.php" class="nav-link">Logout</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="search-section">
+        <h2>Search Students</h2>
+        <form id="searchForm" class="search-form">
+          <div class="form-group">
+            <label for="search_regno">Search by Registration Number:</label>
+            <div class="search-box">
+              <input type="text" id="search_regno" name="search_regno" placeholder="Enter registration number (e.g., REG001)" required />
+              <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+          </div>
+        </form>
+
+        <div id="alertContainer"></div>
+        <div id="loadingSpinner" class="spinner hidden"></div>
+
+        <div id="resultsSection" class="results-section hidden">
+          <h3 id="resultsCount"></h3>
+          <div class="table-responsive">
+            <table class="table" id="resultsTable">
+              <thead>
+                <tr>
+                  <th>Full Name</th>
+                  <th>Email</th>
+                  <th>Registration No.</th>
+                  <th>Phone</th>
+                  <th>Faculty</th>
+                  <th>Department</th>
+                  <th>Course</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="noResults" class="no-results hidden">
+          <p>No students found. Try searching with a different registration number.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- Password Confirmation Modal -->
+<div id="passwordModal" style="display:none; position: fixed; top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:1000;">
+  <div style="background:#fff; padding:20px; border-radius:10px; width:300px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+    <h3>Confirm Admin Password</h3>
+    <p id="studentNameDisplay"></p>
+    <input type="password" id="adminPasswordInput" placeholder="Enter admin password" 
+      style="width:90%; padding:8px; margin-top:10px; border:1px solid #ccc; border-radius:5px;" />
+    <div style="margin-top:15px;">
+      <button id="confirmDeleteBtn" style="padding:8px 15px; background:#d9534f; color:#fff; border:none; border-radius:5px; cursor:pointer;">Confirm</button>
+      <button id="cancelDeleteBtn" style="padding:8px 15px; background:#6c757d; color:#fff; border:none; border-radius:5px; cursor:pointer;">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+  <script src="../backend/admin.js"></script>
+</body>
+</html>

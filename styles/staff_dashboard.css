@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f3f7;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  padding: 20px;
+}
+
+header {
+  background-color: #34495e;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.stats {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.stat-box {
+  background: #2ecc71;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.search-section {
+  margin: 20px 0;
+}
+
+#searchInput {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+
+.ticket-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.ticket-section th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.ticket-section th {
+  background-color: #2980b9;
+  color: white;
+}
+
+button.solve-btn {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.solve-btn:hover {
+  background: #1e8449;
+}
+
+.chat-section {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.chat-box {
+  background: #ecf0f1;
+  height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+}

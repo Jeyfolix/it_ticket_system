@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Search Panel</title>
+  <link rel="stylesheet" href="../styles/dashboard.css" />
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 25px 30px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    .search-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    select, input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+      font-size: 15px;
+    }
+
+    button {
+      background: #007bff;
+      border: none;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover { background: #0056b3; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+      padding: 12px;
+    }
+
+    th {
+      background-color: #f1f3f5;
+      color: #333;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    tr:hover { background-color: #f9f9f9; }
+
+    .actions button {
+      margin-right: 6px;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 14px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    .btn-update { background-color: #28a745; }
+    .btn-delete { background-color: #dc3545; }
+    .btn-block { background-color: #f39c12; }
+    .btn-reset { background-color: #17a2b8; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Search Student / Ticket Records</h2>
+
+    <div class="search-section">
+      <select id="searchType">
+        <option value="student">Student Table</option>
+        <option value="ticket">Ticket Table</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Enter Registration Number">
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <table id="resultTable">
+      <thead>
+        <tr id="tableHeader"></tr>
+      </thead>
+      <tbody id="resultBody"></tbody>
+    </table>
+  </div>
+
+  <script src="../backend/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: #f4f7fa;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #004b23;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  z-index: 1000;
+}
+
+.header .logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  background: #fff;
+  color: #004b23;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* MAIN LAYOUT */
+.main-container {
+  display: flex;
+  margin-top: 70px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  background: #033d1c;
+  color: #fff;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  position: sticky;
+  top: 70px;
+  padding: 20px;
+}
+
+.sidebar-section {
+  margin-bottom: 25px;
+}
+
+.sidebar-title {
+  color: #a7d7c5;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.sidebar-item {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.sidebar-link {
+  text-decoration: none; /* removes underline */
+  color: inherit; /* keeps same color as parent */
+  display: block;
+  width: 100%;
+}
+
+.sidebar-item:hover,
+.sidebar-item.active {
+  background: #046b38;
+}
+
+/* CONTENT */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 70px);
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.page-title {
+  color: #004b23;
+}
+
+.student-search {
+  display: flex;
+  gap: 8px;
+}
+
+.student-search input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.student-search button {
+  background: #004b23;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+/* CARDS */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* FORM */
+.ticket-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.ticket-form label {
+  grid-column: span 2;
+  font-weight: 600;
+  color: #004b23;
+}
+
+.ticket-form input,
+.ticket-form select,
+.ticket-form textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.ticket-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.ticket-form button {
+  grid-column: span 2;
+  background: #004b23;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ticket-form button:hover {
+  background: #046b38;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .content {
+    order: 1;
+  }
+
+  .sidebar {
+    order: 2;
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .ticket-form form {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+}

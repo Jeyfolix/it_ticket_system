@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Registration</title>
+    <link rel="stylesheet" href="../styles/student_register.css">
+    <style>
+        .back-to-login {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #B82B0F;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .back-to-login:hover {
+            text-decoration: underline;
+        }
+        .msg {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 14px;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .msg.success { color: green; }
+        .msg.error { color: red; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Staff Registration Form</h2>
+        <form id="staffForm" action="../backend/register_staff.php" method="POST">
+            <div class="form-group">
+                <label>Staff Number:</label>
+                <input type="text" name="staffno" id="staffno" required>
+            </div>
+
+            <div class="form-group">
+                <label>Full Name:</label>
+                <input type="text" name="fullname" id="fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Department:</label>
+                <input type="text" name="department" id="department" required>
+            </div>
+
+            <div class="form-group">
+                <label>Area of Specialization:</label>
+                <input type="text" name="specialization" id="specialization" required>
+            </div>
+
+            <div class="form-group">
+                <label>Role:</label>
+                <select name="role" id="role" required>
+                    <option value="">-- Select Role --</option>
+                    <option value="Lecturer">Lecturer</option>
+                    <option value="Technician">Technician</option>
+                    <option value="Administrator">Administrator</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number:</label>
+                <input type="text" name="phone" id="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label>Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+
+            <div class="form-group">
+                <label>Confirm Password:</label>
+                <input type="password" name="confirm_password" id="confirm_password" required>
+            </div>
+
+            <button type="submit">Register</button>
+            <p id="message"></p>
+        </form>
+
+        <!-- BACK TO LOGIN LINK -->
+        <a href="../frontend/staff_login.html" class="back-to-login">Back to Login</a>
+    </div>
+
+    <script src="../backend/register_staff.js"></script>
+</body>
+</html>

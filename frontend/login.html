@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="../styles/login.css">
+  <style>
+    /* Optional: quick style for the forgot password link */
+    .forgot-password {
+      display: block;
+      margin-top: 10px;
+      text-align: center;
+      color: #B82B0F;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login Page</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required><br><br>
+      <input type="password" id="password" placeholder="Password" required><br><br>
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Added Forgot Password link -->
+    <a href="student_reset_password.html" class="forgot-password">Forgot Password?</a>
+     <a href="student_register.html" class="forgot-password">Don't have an account? Register here</a>
+  </div>
+
+  <script src="../backend/loginn.js"></script>
+</body>
+</html>

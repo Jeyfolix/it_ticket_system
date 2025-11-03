@@ -1,0 +1,18 @@
+CREATE TABLE student_ticket (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    regno VARCHAR(50),
+    fullname VARCHAR(100),
+    email VARCHAR(100),
+    phone VARCHAR(20),
+    category VARCHAR(100),
+    title VARCHAR(255),
+    description TEXT,
+    attachment VARCHAR(255),
+    priority VARCHAR(20),
+    ticket_number VARCHAR(50) DEFAULT NULL,
+    assigned_to INT NULL,
+    assigned_at TIMESTAMP NULL DEFAULT NULL,
+    CONSTRAINT fk_assigned_to FOREIGN KEY (assigned_to) REFERENCES staff(id) ON DELETE SET NULL;
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
