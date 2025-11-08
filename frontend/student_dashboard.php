@@ -41,10 +41,15 @@
         <div class="sidebar-item">Open Tickets</div>
         <div class="sidebar-item">Request History</div>
         <div class="sidebar-item">Ticket Details</div>
-        <div class="sidebar-item">Self-Help</div>
+  <div class="sidebar-item" onclick="openStudentChat()">💬 Self-Help</div>
         <div class="sidebar-item">Notifications</div>
         <div class="sidebar-item">Quick Actions</div>
       </div>
+      <script>
+function openStudentChat() {
+  window.location.href = "student_chat.php";
+}
+</script>
     </aside>
 
     <!-- Main Content -->
